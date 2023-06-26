@@ -1,0 +1,182 @@
+body {
+    background: url(../assets/technology/background-technology-desktop.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding-bottom: 100px;
+    cursor: default;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    padding-top: 75px;
+}
+
+main .container {
+    width: 1274px;
+}
+
+main .titulo {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 4.7px;
+    color: #ffffff;
+    font-size: 28.5px;
+    margin-bottom: 25px;
+}
+
+main .titulo span {
+    margin-right: 10px;
+    font-weight: 700;
+    color: #ffffff51;
+    font-size: 28px;
+}
+
+main .conteudo {    
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: start;
+    gap: 80px;
+}
+
+main .conteudo .botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+main .conteudo .botoes .btn {
+    width: 79px;
+    height: 79px;
+    border: 1px solid #ffffff9b;
+    border-radius: 50px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    font-weight: 300;
+    font-family: 'Spectral', serif;
+    color: #ffffff;
+}
+
+main .conteudo .botoes .btn:hover,
+main .conteudo .botoes .btn.selecionado {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+main .conteudo ul{
+    width: 480px;
+    height: 310px;
+    margin-right: 40px;
+}
+
+main .informacao {
+    position: absolute;
+    opacity: 0;
+    color: #ffffff;
+    max-width: 500px;
+    transition: .2s ease-in-out;
+}
+
+main .informacao.mostra {
+    opacity: 1;
+}
+
+main .informacao .tecnologia {
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+}
+
+main .informacao .nome {
+    font-size: 56px;
+    font-weight: 300;
+    font-family: 'Spectral', serif;
+    text-transform: uppercase;
+    letter-spacing: -2.3px;
+    margin-bottom: 8px;
+}
+
+main .container .informacao .descricao {
+    font-size: 19px;
+    letter-spacing: .9px;
+    line-height: 32px;
+    max-width: 435px;
+    color: rgba(255, 255, 255, 0.773);
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+
+@media(max-width: 1300px) {
+    body {
+        background-image: url(../assets/technology/background-technology-tablet.jpg);
+    }
+
+    main .conteudo {
+        display: grid;
+        grid-template-areas:"imagem-tecnologia"
+                            "botoes" 
+                            "info-tecnologias";
+        grid-template-columns: 1fr;
+        gap: 50px;
+        justify-items: center;
+    }
+
+    .imagem-tecnologia {
+        grid-area: imagem-tecnologia;
+        width: 100%;
+    }
+
+    .imagem-tecnologia .foto {
+        width: 100%;
+    }
+
+    main .conteudo .botoes {
+        grid-area: botoes;
+        flex-direction: row;
+    }
+
+    .info-tecnologias {
+        grid-area: info-tecnologias;
+    }
+
+    main .conteudo ul {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        width: 100%;
+    }
+
+    main .container ul li {
+        width: 100%
+    }
+
+    main .container .informacao .descricao {
+        max-width:900px;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: 770px) {
+    body {
+        background-image:  url(../assets/technology/background-technology-mobile.jpg);
+        margin-bottom: 80px;
+    }
+
+    main .conteudo .botoes .btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+

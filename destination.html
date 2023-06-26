@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700&family=Spectral:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="src/css/destination.css">
+
+    <title></title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <img class="logo" src="src/assets/shared/logo.svg" alt="logo">
+
+        <nav class="navegacao">
+
+            <input type="checkbox" id="menu-hamburguer">
+
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+
+            <ul class="menu-grande">
+                <li class="item">
+                    <a href="index.html"><span>00</span> Home</a>
+                </li>
+
+                <li class="item">
+                    <a class="ativo" href="destination.html"><span>01</span> destination</a>
+                </li>
+
+                <li class="item">
+                    <a href="crew.html"><span>02</span> crew</a>
+                </li>
+
+                <li class="item">
+                    <a href="technology.html"><span>03</span> technology</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="titulo"> <span>01</span> Pick your destination</h1>
+
+        <div class="conteudo">
+            <img class="imagem-planeta" src="src/assets/destination/image-moon.png" alt="foto de planeta">
+            <div class="informacoes-planetas">
+                <ul class="menu-planetas">
+                    <li>
+                        <p id="moon" class="universo ativa">moon</p>
+                    </li>
+                    <li>
+                        <p id="mars" class="universo ">mars</p>
+                    </li>
+                    <li>
+                        <p id="europa" class="universo">europa</p>
+                    </li>
+                    <li>
+                        <p id="titan" class="universo">titan</p>
+                    </li>
+                </ul>
+
+                <ul class="planetas">
+                    <li>
+                        <div class="informacao selecionado" id="info-moon">
+                            <h2>Moon</h2>
+                            <p class="texto">See our planet as you’ve never seen it before. A perfect relaxing trip away
+                                to help
+                                regain perspective and come back refreshed. While you’re there, take in some history
+                                by visiting the Luna 2 and Apollo 11 landing sites.</p>
+
+                            <ul>
+                                <li>
+                                    <p class="descricao">Avg. distance</p>
+                                    <p class="medidas">384,400 km</p>
+                                </li>
+                                <li>
+                                    <p class="descricao">Est. travel time</p>
+                                    <p class="medidas">3 days</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="informacao " id="info-mars">
+                            <h2>mars</h2>
+                            <p class="texto">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus
+                                Mons,the tallest planetary mountain in our solar system. It’s two and a half times the
+                                size of Everest!</p>
+
+                            <ul>
+                                <li>
+                                    <p class="descricao">Avg. distance</p>
+                                    <p class="medidas">225 mil. km</p>
+                                </li>
+                                <li>
+                                    <p class="descricao">Est. travel time</p>
+                                    <p class="medidas">9 months</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="informacao " id="info-europa">
+                            <h2>Europa</h2>
+                            <p class="texto">The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+                                winter lover’s dream. With an icy surface, it’s perfect for a bit of
+                                ice skating, curling, hockey, or simple relaxation in your snug
+                                wintery cabin.</p>
+
+                            <ul>
+                                <li>
+                                    <p class="descricao">Avg. distance</p>
+                                    <p class="medidas">628 mil. km</p>
+                                </li>
+                                <li>
+                                    <p class="descricao">Est. travel time</p>
+                                    <p class="medidas">3 years</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="informacao " id="info-titan">
+                            <h2>Titan</h2>
+                            <p class="texto">The only moon known to have a dense atmosphere other than Earth, Titan
+                                is a home away from home (just a few hundred degrees colder!). As a
+                                bonus, you get striking views of the Rings of Saturn.</p>
+
+                            <ul>
+                                <li>
+                                    <p class="descricao">Avg. distance</p>
+                                    <p class="medidas">1.6 bil. km</p>
+                                </li>
+                                <li>
+                                    <p class="descricao">Est. travel time</p>
+                                    <p class="medidas">7 years</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="src/js/destination.js"></script>
+</body>
+
+</html>

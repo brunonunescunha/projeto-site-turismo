@@ -1,0 +1,202 @@
+body {
+    background: url(../assets/destination/background-destination-desktop.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding-bottom: 100px;
+    cursor: default;
+}
+
+main {
+    max-width: 1110px;
+    margin: 0 auto;
+    height: 650px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+main .titulo {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3.2px;
+    color: #ffffff;
+}
+
+main .titulo span{
+    margin-right: 15px;
+    font-weight: 700;
+    color: #ffffff86;
+    font-size: 28px;
+}
+
+main .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .conteudo .imagem-planeta {
+    margin: 100px 0 0 65px;
+    padding-right: 40px;
+}
+
+main .conteudo .informacoes-planetas {
+    width: 442px;
+    padding-top: 50px;
+    height: 540px;
+    position: relative;
+}
+
+main .conteudo .menu-planetas {
+    display: flex;
+    gap: 34px;
+}
+
+main .conteudo .menu-planetas li p {
+    padding: 14px 0;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.773);
+    cursor: pointer;
+    position: relative;
+}
+
+main .conteudo .menu-planetas li p.ativa::before,
+main .conteudo .menu-planetas li p::before{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+
+main .conteudo .menu-planetas li p.ativa::before,
+main .conteudo .menu-planetas li p:hover::before {
+    background-color: #fff;
+    width: 100%;
+}
+
+
+main .conteudo .planetas .informacao {
+    position: absolute;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    max-width: 442px;
+}
+
+main .conteudo .planetas .informacao.selecionado {
+    opacity: 1;
+}
+
+main .conteudo .planetas .informacao h2 {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: -8px;
+    font-family: 'Spectral', serif;
+    color: #ffffff;
+}
+
+main .conteudo .planetas .informacao .texto {
+    padding-bottom: 50px;
+    font-size: 21px;
+    letter-spacing: .7px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.773);
+    font-weight: 300
+}
+
+main .conteudo .planetas .informacao ul {
+    display: flex;
+    margin-top: 30px;
+    gap: 72px;
+}
+
+main .conteudo .planetas .informacao ul li p {
+    text-transform: uppercase;
+}
+
+main .conteudo .planetas .informacao ul li .descricao {
+    margin-bottom: 3px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.773);
+}
+
+main .conteudo .planetas .informacao ul li .medidas {
+    font-size: 29px;
+    font-family: 'Spectral', serif;
+    letter-spacing: -1.9px;
+    color: #ffffff;
+}
+
+@media(max-width: 960px) {
+    body {
+        background-image: url(../assets/destination/background-destination-tablet.jpg);
+    }
+
+    main {
+        height: 100%;
+        padding: 50px;
+        align-items: center;
+    }
+
+    main .titulo {
+        text-align: center;
+    }
+
+    main .conteudo {
+        flex-direction: column;
+    }
+
+    main .conteudo .imagem-planeta {
+        width: 100%;
+        margin: 100px 0 0;
+        padding: 0;
+    }
+
+    main .conteudo .informacoes-planetas ul{
+        text-align: center; 
+        justify-content: space-evenly;
+    }
+
+}
+
+@media(max-width: 500px) {
+    body {
+        background-image: url(../assets/destination/background-destination-mobile.jpg);
+    }
+
+    main {
+        margin: 80px auto;
+    }
+
+    main .titulo {
+        font-size: 25px;
+    }
+
+    main .titulo span {
+        font-size: 26px;
+    }
+
+    main .conteudo .planetas .informacao ul {
+        flex-direction: column;
+        gap: 50px;
+    }
+    main .conteudo .planetas .informacao h2 {
+        font-size: 70px;
+    }
+
+    main .conteudo .planetas .informacao .texto {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.216);;
+    }
+    
+    main .conteudo .informacoes-planetas {
+        width: 100%;
+    }
+}

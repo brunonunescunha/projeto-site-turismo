@@ -1,0 +1,276 @@
+body {
+    background: url(../assets/crew/background-crew-desktop.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+    cursor: default;
+    padding-bottom: 80px;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 40px;
+    height: 762px;
+}
+
+main .container {
+    min-width: 540px;
+    margin-left: 50px;
+    padding: 74px 0 93px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+main .titulo {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 4.5px;
+    color: #ffffff;
+    font-size: 28.5px;
+}
+
+.titulo.cima {
+    display: none;
+}
+
+main .titulo span {
+    margin-right: 10px;
+    font-weight: 700;
+    color: #ffffff51;
+    font-size: 28px;
+}
+
+main .container .informacao {
+    position: absolute;
+    opacity: 0;
+    top: 33.5%;
+    left: -2px;
+    height: 300px;
+    width: 630px;
+    color: #ffffff;
+    transition: .3s ease-in-out;
+}
+
+main .container .informacao.mostra {
+    opacity: 1;
+}
+
+main .container .informacao .cargo {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: 'Spectral', serif;
+    letter-spacing: -2.2px;
+    color: rgba(255, 255, 255, 0.525);
+    font-weight: 300;
+}
+
+main .container .informacao .nome {
+    font-size: 56px;
+    font-weight: 300;
+    font-family: 'Spectral', serif;
+    text-transform: uppercase;
+    letter-spacing: -2.3px;
+    margin-bottom: 15px;
+}
+
+main .container .informacao .descricao {
+    font-size: 20px;
+    letter-spacing: .9px;
+    line-height: 32px;
+    max-width: 440px;
+    color: rgba(255, 255, 255, 0.773);
+    font-weight: 300;
+}
+
+main .container .botoes {
+    display: flex;
+    gap: 24px;
+}
+
+main .container .botoes .btn {
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.266);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+main .container .botoes .btn.selecionado {
+    background-color: #ffffff;
+}
+
+main .container .botoes .btn:hover {
+    background-color: #ffffff;
+}
+
+main .imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 602px;
+    width: 515px;
+}
+
+@media(max-width: 1225px) {
+    body {
+        background-image: url(../assets/crew/background-crew-tablet.jpg);
+        padding-bottom: 60px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        max-width: 1110px;
+        gap: 0;
+    }
+
+    main .container {
+        text-align: center;
+        height: 550px;
+        width: 100%;
+        align-items: center;
+        padding: 74px 0 50px;
+        margin: 0;
+    }
+
+    main .container ul {
+        width: 630px;
+        height: 300px;
+    }
+
+    main .container .informacao {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    main .container .informacao .descricao {
+        max-width: 630px;
+    }
+
+    main .container .botoes .btn {
+        z-index: 1;
+    }
+
+}
+
+@media(max-width: 770px) {
+    main {
+        padding: 50px 0;
+        display: grid;
+        grid-template-areas: "titulo"
+            "imagem"
+            "container";
+        justify-items: center;
+
+    }
+
+    .titulo.cima {
+        grid-area: titulo;
+        display: block;
+    }
+
+    .imagem {
+        grid-area: imagem;
+        margin-top: 70px;
+    }
+
+    .container {
+        grid-area: container;
+
+    }
+
+    main .container {
+        display: grid;
+        grid-template-areas: "botoes"
+            "info-pessoas";
+        justify-items: center;
+        margin-top: 0px;
+    }
+
+    .botoes {
+        grid-area: botoes;
+    }
+
+    .info-pessoas {
+        grid-area: info-pessoas;
+    }
+
+    .titulo {
+        display: none;
+    }
+
+    main .container .informacao {
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    main .container {
+        padding: 0;
+        height: 350px;
+        justify-content: center;
+        margin-top: 50px;
+        min-width: 100px;
+    }
+}
+
+@media(max-width: 660px) {
+    body {
+        background-image: url(../assets/crew/background-crew-mobile.jpg);
+        padding-bottom: 80px;
+    }
+
+    main .container ul {
+        width: 500px;
+    }
+
+    main .container .informacao {
+        width: 400px;
+        height: 100%;
+    }
+
+    main .container .informacao .nome {
+        margin: 0;
+        font-size: 45px;
+    }
+
+    main .imagem {
+        width: 400px;
+        height: 100%;
+    }
+
+    main .imagem .foto {
+        width: 100%;
+    }
+}
+
+@media(max-width: 560px) {
+    
+    main .container ul {
+        width: 300px;
+    }
+
+    main .container .informacao {
+        width: 300px;
+    }
+
+    main .container .informacao .nome {
+        font-size: 35px;
+    }
+}
+
+@media(max-width: 440px) {
+    main .imagem {
+        width: 300px;
+    }
+}
